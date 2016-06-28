@@ -1,0 +1,77 @@
+<html>
+ <head>
+	<link href="css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="css/app.css" rel="stylesheet"/>	
+ </head>
+ <body ng-app="testApp">
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+     <div class="container">
+       <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">PouchDB Test</a>
+       </div>
+       <div id="navbar" class="collapse navbar-collapse"></div>
+     </div><!--nav-container -->
+  </nav>
+
+  <div class="container" ng-controller="MainCtrl">
+  	<div class="row">
+  		<div class="col-md-4">
+  		  <fieldset  class="fieldset">
+    	   <form novalidate>
+	        <div>
+	   			<input type="text"   class="form-control" placeholder="Enter first name" ng-model="inputForm.firstname" required>  			
+	   		</div>	   		
+	   		<div>
+	   			 <input type="text"  class="form-control"  placeholder="Enter last name" ng-model="inputForm.lastname" required>   			 
+	   		</div>	   			  
+	   		<div>	 
+	   			 <input type="email"  class="form-control"  placeholder="Enter email" ng-model="inputForm.email" required>
+	   			 <br><br>
+	   		</div>	   		
+	   		<div >
+	   			<button type="submit" ng-click="save(inputForm)" class="btn btn-success">Add</button>	
+
+          <button type="submit" ng-click="cancel()" class="btn btn-default">Cancel</button>   				   				   			
+	   		</div>	   		
+	   	   </form>           
+	      </fieldset>	
+  		</div><!--end of col-md-4 -->
+
+
+  		<div class="col-md-8">
+  			<table class="table table-striped">
+  				<thead>
+  					<tr>
+  						<th>First Name</th>
+  						<th>Last Name</th>
+              <th>Email</th>  						
+  					</tr>
+  				</thead>
+  				<tbody>
+  					<tr ng-repeat="(key,value) in items">
+  						<td>{{value.firstname}}</td>
+  						<td>{{value.lastname}}</td>
+              <td>{{value.email}}</td>              
+              <td><button ng-click="edit(value._id)" class="btn btn-default">Edit</button></td>
+  						<td><button ng-click="delete(value._id,value._rev)" class="btn btn-success">Del</button></td>
+  					</tr>
+  				</tbody>
+  			</table>
+  		</div><!--end of col-md-8 -->
+   </div><!--end of class row -->
+  </div><!--end of container -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>    
+  <script src="js/angular.min.js"></script>
+  <script src="js/pouchdb.js"></script> 
+  <script src="js/app.js"></script> 
+  <script src="mainjs/controller.js"></script> 
+  <script src="mainjs/service.js"></script> 
+ </body>
+</html>

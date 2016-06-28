@@ -1,0 +1,36 @@
+ 
+  body {
+  padding-top: 50px;
+  }
+
+  #innercontainer{  	
+  	margin:10px;
+  	min-width:80px;
+  	margin-left:auto; 
+  	margin-right:auto;
+  }
+
+  input{   	
+   	border-style:solid;	
+	border-color: #ccc;
+	border-radius: 5px;
+	padding:5px;
+	margin-bottom: 2px; 
+   }
+
+  .fieldset {  	
+  	margin-top:48px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+   input[type=text], input[type=email] {
+   	margin-top:8px;
+   }
+
+ 
+   .validat{
+   			margin-top:0px;
+   			color:red;
+   }
+  

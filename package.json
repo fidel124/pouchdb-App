@@ -1,0 +1,21 @@
+{
+  "name": "programmingTest",
+  "version": "1.0.0",
+  "description": "Angular-pouchDB Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Fidelis Ololube",
+  "license": "ISC",
+  "dependencies": {
+    "angularjs": "0.0.1",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "karma": "~0.10.9",
+    "karma-jasmine": "~0.1.5",
+    "karma-chrome-launcher": "~0.1.2"
+  }
+}
